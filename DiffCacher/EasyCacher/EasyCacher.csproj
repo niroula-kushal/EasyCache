@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>EasyCache</RootNamespace>
-        <PackageId>EasyCachec</PackageId>
+        <PackageId>EasyCacher</PackageId>
     </PropertyGroup>
 
     <ItemGroup>

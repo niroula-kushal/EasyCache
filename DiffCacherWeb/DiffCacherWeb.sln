@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCacherWeb", "EasyCacherWeb\EasyCacherWeb.csproj", "{C135CE7A-F541-43A4-B230-AA1990DFE09A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCachec", "..\DiffCacher\EasyCachec\EasyCachec.csproj", "{57643B87-1017-4DDF-9C03-CF5388AA167F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCacher", "..\DiffCacher\EasyCacher\EasyCacher.csproj", "{57643B87-1017-4DDF-9C03-CF5388AA167F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCacher.Abstractions", "..\EasyCacher.Abstractions\EasyCacher.Abstractions.csproj", "{0A025F35-6D3E-4531-A900-C83410DF3AD2}"
 EndProject
