@@ -13,7 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\DiffCacher\DiffCacher\DiffCacher.csproj" />
+      <ProjectReference Include="..\..\DiffCacher\EasyCachec\EasyCachec.csproj" />
       <ProjectReference Include="..\..\EasyCacher.Abstractions\EasyCacher.Abstractions.csproj" />
     </ItemGroup>
 

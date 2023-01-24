@@ -1,4 +1,4 @@
-﻿namespace EasyCache;
+﻿namespace EasyCacher.Abstractions;
 
 public interface IEasyCacheManager<T>
 {

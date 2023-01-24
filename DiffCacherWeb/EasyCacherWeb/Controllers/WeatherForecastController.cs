@@ -13,19 +13,31 @@ public class WeatherForecastController : ControllerBase
     };
 
     private readonly ILogger<WeatherForecastController> _logger;
-    private readonly IEasyCache _easyCache;
+    private readonly IEasyCacheClient _easyCacheClient;
+    private readonly IEasyCacheKeyManager _easyCacheKeyManager;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger, IEasyCache easyCache)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IEasyCacheClient easyCacheClient,
+        IEasyCacheKeyManager easyCacheKeyManager)
     {
         _logger = logger;
-        _easyCache = easyCache;
+        _easyCacheClient = easyCacheClient;
+        _easyCacheKeyManager = easyCacheKeyManager;
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public async Task<IEnumerable<WeatherForecast>> Get()
+    public async Task<IActionResult> Get()
     {
-        var cache = _easyCache.UseCache<List<WeatherForecast>>(GetForecast, "WeatherItems");
-        return await cache.GetData();
+        var cache = _easyCacheClient.UseCache<List<WeatherForecast>>(GetForecast, new
+        {
+            key = "weather_items",
+            id = 45
+        });
+        var keys = _easyCacheKeyManager.GetKeys();
+        return Ok(new
+        {
+            data = (await cache.GetData()).ToList(),
+            keys = keys
+        });
     }
 
     private Task<List<WeatherForecast>> GetForecast()
